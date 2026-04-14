@@ -25,6 +25,10 @@ class _CategoryScreenState extends State<CategoryScreen> {
   void initState() {
     super.initState();
     _loadMore();
+    // Funcionalidad adicional 5: Scroll infinito con paginación automática.
+    // Justificación: Carga más artículos automáticamente al acercarse al final
+    // de la lista, consumiendo la API paginada de WordPress, mejorando la
+    // experiencia de navegación sin necesidad de botones de paginación.
     _scrollController.addListener(() {
       if (_scrollController.position.pixels >= _scrollController.position.maxScrollExtent - 300) {
         _loadMore();

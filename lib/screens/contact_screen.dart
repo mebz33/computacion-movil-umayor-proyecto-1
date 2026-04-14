@@ -23,6 +23,10 @@ class _ContactScreenState extends State<ContactScreen> {
     super.dispose();
   }
 
+  // Funcionalidad adicional 4: Envío de formulario de contacto por email.
+  // Justificación: Replica la funcionalidad del formulario de contacto del sitio web,
+  // permitiendo al usuario enviar un mensaje pre-llenado a prensa@elmauleinforma.cl
+  // mediante url_launcher, integrando la app con el cliente de correo del dispositivo.
   void _sendEmail() {
     final subject = Uri.encodeComponent('Contacto desde App - ${_nameController.text}');
     final body = Uri.encodeComponent(

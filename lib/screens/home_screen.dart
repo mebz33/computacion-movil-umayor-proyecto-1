@@ -73,9 +73,15 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Container(height: 4, decoration: const BoxDecoration(gradient: AppColors.primaryGradient)),
         ),
       ),
+      // Funcionalidad adicional 1: Navegación mediante Drawer lateral.
+      // Justificación: Permite acceder a todas las secciones y categorías del sitio
+      // desde cualquier pantalla, replicando el menú de navegación del sitio web original.
       drawer: const AppDrawer(),
       body: _loading
           ? const Center(child: CircularProgressIndicator(color: AppColors.primary))
+          // Funcionalidad adicional 2: Pull-to-refresh.
+          // Justificación: Permite al usuario actualizar el contenido de la portada
+          // deslizando hacia abajo, mejorando la experiencia en dispositivos móviles.
           : RefreshIndicator(
               color: AppColors.primary,
               onRefresh: _loadData,

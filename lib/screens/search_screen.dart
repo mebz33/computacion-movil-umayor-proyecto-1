@@ -4,6 +4,9 @@ import '../services/wp_service.dart';
 import '../theme.dart';
 import '../widgets/article_card.dart';
 
+// Funcionalidad adicional 3: Buscador global de noticias.
+// Justificación: Permite al usuario buscar artículos en tiempo real consumiendo
+// la API REST de WordPress, replicando la funcionalidad de búsqueda del sitio web.
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
 
