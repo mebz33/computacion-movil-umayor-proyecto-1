@@ -41,12 +41,12 @@ class ArticleCard extends StatelessWidget {
                   height: 200,
                   width: double.infinity,
                   fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(
+                  placeholder: (_, s) => Container(
                     height: 200,
                     color: Colors.grey[200],
                     child: const Center(child: CircularProgressIndicator(strokeWidth: 2)),
                   ),
-                  errorWidget: (_, __, ___) => Container(
+                  errorWidget: (_, u, e) => Container(
                     height: 200,
                     color: Colors.grey[200],
                     child: const Icon(Icons.image_not_supported, size: 48, color: Colors.grey),
@@ -150,8 +150,8 @@ class ArticleCardSmall extends StatelessWidget {
                   width: 100,
                   height: 75,
                   fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(width: 100, height: 75, color: Colors.grey[200]),
-                  errorWidget: (_, __, ___) => Container(
+                  placeholder: (_, s) => Container(width: 100, height: 75, color: Colors.grey[200]),
+                  errorWidget: (_, u, e) => Container(
                     width: 100, height: 75, color: Colors.grey[200],
                     child: const Icon(Icons.image, color: Colors.grey),
                   ),

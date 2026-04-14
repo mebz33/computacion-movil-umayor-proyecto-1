@@ -137,8 +137,8 @@ class _HeroCard extends StatelessWidget {
               CachedNetworkImage(
                 imageUrl: article.imageUrl,
                 fit: BoxFit.cover,
-                placeholder: (_, __) => Container(color: Colors.grey[300]),
-                errorWidget: (_, __, ___) => Container(color: Colors.grey[300], child: const Icon(Icons.image, size: 32, color: Colors.grey)),
+                placeholder: (_, s) => Container(color: Colors.grey[300]),
+                errorWidget: (_, u, e) => Container(color: Colors.grey[300], child: const Icon(Icons.image, size: 32, color: Colors.grey)),
               ),
               Container(
                 decoration: BoxDecoration(
@@ -209,8 +209,8 @@ class _OpinionListItem extends StatelessWidget {
                 width: 120,
                 height: 90,
                 fit: BoxFit.cover,
-                placeholder: (_, __) => Container(width: 120, height: 90, color: Colors.grey[200]),
-                errorWidget: (_, __, ___) => Container(width: 120, height: 90, color: Colors.grey[200], child: const Icon(Icons.image, color: Colors.grey)),
+                placeholder: (_, s) => Container(width: 120, height: 90, color: Colors.grey[200]),
+                errorWidget: (_, u, e) => Container(width: 120, height: 90, color: Colors.grey[200], child: const Icon(Icons.image, color: Colors.grey)),
               ),
             ),
             const SizedBox(width: 12),

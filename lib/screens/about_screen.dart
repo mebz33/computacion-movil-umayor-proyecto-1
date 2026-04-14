@@ -44,8 +44,8 @@ class AboutScreen extends StatelessWidget {
                   width: double.infinity,
                   height: 200,
                   fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(height: 200, color: Colors.grey[200]),
-                  errorWidget: (_, __, ___) => Container(
+                  placeholder: (_, s) => Container(height: 200, color: Colors.grey[200]),
+                  errorWidget: (_, u, e) => Container(
                     height: 200,
                     decoration: BoxDecoration(
                       color: Colors.grey[100],

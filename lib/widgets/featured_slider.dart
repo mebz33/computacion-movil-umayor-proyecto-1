@@ -62,8 +62,8 @@ class _FeaturedSliderState extends State<FeaturedSlider> {
                         CachedNetworkImage(
                           imageUrl: article.imageUrl,
                           fit: BoxFit.cover,
-                          placeholder: (_, __) => Container(color: Colors.grey[300]),
-                          errorWidget: (_, __, ___) => Container(
+                          placeholder: (_, s) => Container(color: Colors.grey[300]),
+                          errorWidget: (_, u, e) => Container(
                             color: Colors.grey[300],
                             child: const Icon(Icons.image, size: 48),
                           ),

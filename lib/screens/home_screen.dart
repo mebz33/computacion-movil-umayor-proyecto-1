@@ -6,7 +6,7 @@ import '../services/wp_service.dart';
 import '../theme.dart';
 import '../widgets/app_drawer.dart';
 import '../widgets/app_footer.dart';
-import '../widgets/section_header.dart';
+
 import 'article_detail_screen.dart';
 import 'category_screen.dart';
 import 'search_screen.dart';
@@ -114,8 +114,8 @@ class _HomeScreenState extends State<HomeScreen> {
               CachedNetworkImage(
                 imageUrl: hero.imageUrl,
                 fit: BoxFit.cover,
-                placeholder: (_, __) => Container(color: Colors.grey[300]),
-                errorWidget: (_, __, ___) => Container(color: Colors.grey[300], child: const Icon(Icons.newspaper, size: 60, color: Colors.grey)),
+                placeholder: (_, s) => Container(color: Colors.grey[300]),
+                errorWidget: (_, u, e) => Container(color: Colors.grey[300], child: const Icon(Icons.newspaper, size: 60, color: Colors.grey)),
               ),
               Container(
                 decoration: BoxDecoration(
@@ -300,8 +300,8 @@ class _FeaturedArticleCard extends StatelessWidget {
                 height: 190,
                 width: double.infinity,
                 fit: BoxFit.cover,
-                placeholder: (_, __) => Container(height: 190, color: Colors.grey[200], child: const Center(child: CircularProgressIndicator(strokeWidth: 2))),
-                errorWidget: (_, __, ___) => Container(height: 190, color: Colors.grey[200], child: const Icon(Icons.image, size: 48, color: Colors.grey)),
+                placeholder: (_, s) => Container(height: 190, color: Colors.grey[200], child: const Center(child: CircularProgressIndicator(strokeWidth: 2))),
+                errorWidget: (_, u, e) => Container(height: 190, color: Colors.grey[200], child: const Icon(Icons.image, size: 48, color: Colors.grey)),
               ),
             ),
             Padding(
@@ -368,8 +368,8 @@ class _SmallGridCard extends StatelessWidget {
                   imageUrl: article.imageUrl,
                   width: double.infinity,
                   fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(color: Colors.grey[200]),
-                  errorWidget: (_, __, ___) => Container(color: Colors.grey[200], child: const Icon(Icons.image, color: Colors.grey)),
+                  placeholder: (_, s) => Container(color: Colors.grey[200]),
+                  errorWidget: (_, u, e) => Container(color: Colors.grey[200], child: const Icon(Icons.image, color: Colors.grey)),
                 ),
               ),
             ),
